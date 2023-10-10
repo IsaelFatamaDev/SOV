@@ -1,0 +1,30 @@
+    1  sudo apt update && sudo apt upgrade -y
+    2  sudo apt-get install apache2 -y
+    3  sudo systemctl status apache2
+    4  sudo apachectl -v
+    5  sudo apt install mysql-server -y
+    6  sudo apt install php libapache2-mod-php php-mysql
+    7  sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl
+    8  sudo phpenmod mbstring
+    9  sudo systemctl restart apache2
+   10  sudo mysql
+   11  mysql -u root -p
+   12  sudo service apache2 restart
+   13  sudo cp /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf
+   14  sudo a2enconf phpmyadmin
+   15  sudo service apache2 restart
+   16  mysql -u isael -p
+   17  HISTORY
+   18  history
+   19  history > comandos.txt
+   20  sudo apt-get install git
+   21  git config --global user.email
+   22  git config --global user.email isael.fatama@vallegrande.edu.pe
+   23  git config --global user.name "IsaelFatamaDev"
+   24  git clone https://github.com/IsaelFatamaDev/SOV.git
+   25  ls -l
+   26  cd SOV/
+   27  sudo mkdir 2.ServidorLamp
+   28  ls -l
+   29  cd ..
+   30  sudo mv 09_IsaelFatama_Comandos.txt /home/ubuntu/SOV/2.ServidorLamp/
