@@ -1,6 +1,7 @@
 var express = require("express");
 var mysql = require("mysql");
 var app = express();
+var cors = require("cors");
 
 
 app.use(express.json());
@@ -10,7 +11,7 @@ var con = mysql.createConnection({
       host: "localhost",
       user: "fatama",
       password: "admin",
-      database: ""
+      database: "dbRestaurante"
 });
 
 con.connect(function (err) {
