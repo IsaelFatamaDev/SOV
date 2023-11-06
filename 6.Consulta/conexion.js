@@ -26,14 +26,6 @@ conexion.query('SELECT * FROM customer LIMIT 100;', function (err, result, field
       });
 })
 
-conexion.query('SELECT * FROM staff', function (err, result, field) {
-      if (err) throw err;
-      result.forEach(element => {
-            console.log(element)
-      });
-})
-
-
 const query = "SHOW TABLES";
 
 conexion.query(query, (err, results) => {
