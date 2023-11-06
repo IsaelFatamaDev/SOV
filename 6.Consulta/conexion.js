@@ -19,7 +19,7 @@ conexion.connect(function (err) {
       console.log("Conexion exitosa");
 });
 
-conexion.query('SELECT * FROM rental', function (err, result, field) {
+conexion.query('SELECT * FROM customer LIMIT 100;', function (err, result, field) {
       if (err) throw err;
       result.forEach(element => {
             console.log(element)
