@@ -35,9 +35,11 @@ conexion.query('INSERT INTO ACTOR (first_name, last_name) VALUES ("ISAEL", "FATA
     console.log("Registro Agregado: ", result);
 });
 //BORRAR
-conexion.query('DELETE FROM ACTOR WHERE actor_id = 201;', function (err, result, field) {});
-if (err) throw err;
-console.log("Registro Actualizado: ", result);
+conexion.query('DELETE FROM ACTOR WHERE actor_id = 201;', function (err, result, field) {
+    if (err) throw err;
+    console.log("Registro Actualizado: ", result);
+});
+
 
 //actualizar
 conexion.query('UPDATE ACTOR SET first_name = "PEPITO" WHERE actor_id = 1;', function (err, result, field) {
