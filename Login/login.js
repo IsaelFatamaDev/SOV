@@ -13,20 +13,19 @@ const connection = mysql.createConnection({
 const app = express();
 
 app.use(session({
-	secret: 'secret',
-	resave: true,
-	saveUninitialized: true
+    secret: 'secret',
+    resave: true,
+    saveUninitialized: true
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'static')));
-app.use(express.static(path.join(__dirname, 'style.css')));
+
+// Configura la ruta estática para la carpeta 'static'
+app.use('/static', express.static(path.join(__dirname, 'static')));
 
 app.get('/', function(request, response) {
-
-	response.sendFile(path.join(__dirname + '/login.html'));
+    response.sendFile(path.join(__dirname, 'login.html'));
 });
-
 app.post('/auth', function(request, response) {
 
 	let username = request.body.username;
