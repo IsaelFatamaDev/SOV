@@ -49,13 +49,12 @@ app.post('/auth', function(request, response) {
 	}
 });
 
-app.get('/home', function(request, response) {
-	if (request.session.loggedin) {
-		response.send('Te has logueado satisfactoriamente:, ' + request.session.username + '!');
-	} else {
-		response.send('¡Inicia sesión para ver esta página!');
-	}
-	response.end();
+app.get('/home.html', function(request, response) {
+    if (request.session.loggedin) {
+        response.sendFile(path.join(__dirname, 'home.html'));
+    } else {
+        response.send('¡Inicia sesión para ver esta página!');
+    }
 });
 
 app.listen(3000);
