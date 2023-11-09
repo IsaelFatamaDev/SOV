@@ -20,5 +20,6 @@
     "graceful-fs": "^4.2.11",
     "minimatch": "^9.0.3"
   },
+  "keywords": [],
   "description": ""
 }
