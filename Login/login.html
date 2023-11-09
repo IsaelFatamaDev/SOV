@@ -1,26 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ConfiguroWeb</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
-    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <title>lOGIN</title>
+    <link rel="stylesheet" href="CSS/style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
 </head>
 <body>
-    <div class="join">
-        <h1>Login | <a href="https://www.ConfiguroWeb.com/"></a></h1>
+
+    <div class="login">
+     <h1>Login <a href=""> IsaelFatama</a></h1>
+
         <form action="/auth" method="post">
             <label for="username">
-                <i class="fas fa-user"></i>
-            </label>
-            <input type="text" name="username" placeholder="Usuario" id="username" required>
-            <label for="password">
-                <i class="fas fa-lock"></i>
-            </label>
-            <input type="password" name="password" placeholder="Contraseña" id="password" required>
-            <input type="submit" value="Ingresar">
+            <i class="fas fa-user"></i>
+        </label>
+        <input type="text" name="username" id="username" placeholder="Usuario">
+        <label for="password">
+            <i class="fas fa-lock"></i>
+        </label>
+        <input type="password" name="password" id="password" placeholder="Contraseña">
+        <input type="submit" value="Ingresar">
+
         </form>
     </div>
+    
 </body>
 </html>
