@@ -24,7 +24,8 @@ conexion.connect(function (err) {
 conexion.query('SELECT * FROM actor;', function (err, result, field) {
     if (err) throw err;
     result.forEach(element => {
-          console.log(element)
+          console.log(element);
+	console.log("Datos Finalizados");
     });
 });
 
@@ -35,9 +36,9 @@ conexion.query('INSERT INTO actor (first_name, last_name) VALUES ("ISAEL", "FATA
     console.log("Registro Agregado: ", result);
 });
 //BORRAR
-conexion.query('DELETE FROM actor WHERE actor_id = 203;', function (err, result, field) {
+conexion.query('DELETE FROM actor WHERE actor_id = 204;', function (err, result, field) {
     if (err) throw err;
-    console.log("Registro Actualizado: ", result);
+    console.log("Registro Borrado: ", result);
 });
 
 
